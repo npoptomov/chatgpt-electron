@@ -1,0 +1,19 @@
+{
+    "directories": {
+      "output": "build"
+    },
+    "win": {
+      "icon": "resources/icons/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "resources/icons/icon.ico",
+      "uninstallerIcon": "resources/icons/icon.ico",
+      "installerHeaderIcon": "resources/icons/icon.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  }
+  

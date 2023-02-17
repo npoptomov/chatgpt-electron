@@ -1,0 +1,52 @@
+{
+  "name": "chatgpt-electron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "prestart": "npm run ts",
+    "start": "electron .",
+    "clean:dist": "rimraf ./dist",
+    "clean:lib": "rimraf ./lib",
+    "prets": "npm run clean:lib",
+    "ts": "tsc",
+    "build:win": "electron-builder --win"
+  },
+  "build": {
+    "productName": "ChatGPT",
+    "appId": "electron.chatgpt",
+    "directories": {
+      "output": "build"
+    },
+    "win": {
+      "icon": "resources/icons/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "resources/icons/icon.ico",
+      "uninstallerIcon": "resources/icons/icon.ico",
+      "installerHeaderIcon": "resources/icons/icon.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/auto-launch": "^5.0.2",
+    "@types/throttle-debounce": "^5.0.0",
+    "electron": "^23.0.0",
+    "electron-builder": "^23.6.0",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "auto-launch": "^5.0.5",
+    "electron-context-menu": "^3.6.1",
+    "electron-log": "^5.0.0-beta.16",
+    "electron-store": "^8.1.0",
+    "electron-util": "^0.17.2",
+    "throttle-debounce": "^5.0.0"
+  }
+}

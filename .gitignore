@@ -1,0 +1,27 @@
+# Ignore .DS_Store files (Mac OS)
+.DS_Store
+
+# Ignore directories
+node_modules/
+lib/
+dist/
+build/
+
+# Ignore log files (Ruby)
+*.log
+
+chatgpt-icon.png
+
+# Ignore compiled binary files (C++)
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Ignore compiled Python files
+*.pyc
+__pycache__/
+
+# Ignore editor configuration files
+.vscode/
+.idea/
