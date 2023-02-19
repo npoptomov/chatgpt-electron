@@ -3,7 +3,7 @@ ChatGPT Electron App is a cross-platform desktop application for ChatGPT.
 
 ## Installation
 
-To install My Awesome Electron App, follow these steps:
+To install ChatGPT Electron App, follow these steps:
 
 1. Download the installer for your operating system (Windows, macOS) from the Releases section
 2. Double-click the installer file to begin the installation process.
