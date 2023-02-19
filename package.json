@@ -1,6 +1,6 @@
 {
   "name": "chatgpt-electron",
-  "version": "1.0.0",
+  "version": "1.1.0-alpha",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
@@ -11,7 +11,8 @@
     "prets": "npm run clean:lib",
     "ts": "tsc",
     "build:win": "electron-builder --win",
-    "build:mac": "electron-builder --mac"
+    "build:mac": "electron-builder --mac",
+    "build:linux": "electron-builder --linux"
   },
   "build": {
     "productName": "ChatGPT",

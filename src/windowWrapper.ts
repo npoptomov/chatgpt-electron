@@ -17,7 +17,7 @@ export default (url: string): BrowserWindow => {
     minHeight: 570,
     minWidth: 480,
     center: true,
-    title: 'Google Chat',
+    title: 'ChatGPT',
     backgroundColor: '#E8EAED',
     autoHideMenuBar: store.get('app.hideMenuBar'),
   });
@@ -29,7 +29,7 @@ export default (url: string): BrowserWindow => {
     window.webContents.session.setSpellCheckerEnabled( !store.get('app.disableSpellChecker') );
   });
 
-  window.loadURL(url);
+  window.loadURL(url, {userAgent: 'Chrome'});
 
   return window;
 };
