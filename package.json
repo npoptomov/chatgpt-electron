@@ -10,7 +10,8 @@
     "clean:lib": "rimraf ./lib",
     "prets": "npm run clean:lib",
     "ts": "tsc",
-    "build:win": "electron-builder --win"
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --mac"
   },
   "build": {
     "productName": "ChatGPT",
@@ -20,6 +21,10 @@
     },
     "win": {
       "icon": "resources/icons/icon.ico"
+    },
+    "mac": {
+      "category": "public.app-category.developer-tools",
+      "icon": "resources/icons/icon.icns"
     },
     "nsis": {
       "oneClick": false,
