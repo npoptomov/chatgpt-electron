@@ -9,7 +9,8 @@ To install ChatGPT Electron App, follow these steps:
 2. Double-click the installer file to begin the installation process.
 3. Follow the on-screen instructions to complete the installation.
 
-## Features
+## Known issues
+- Google Account login may not work on MacOS, Linux versions.
 
 ## Troubleshooting
 
