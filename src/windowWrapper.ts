@@ -1,6 +1,7 @@
 import path from 'path';
 import {app, BrowserWindow, nativeImage} from 'electron';
 import store from './config';
+const os = require('os');
 
 export default (url: string): BrowserWindow => {
   const window = new BrowserWindow({
@@ -10,7 +11,6 @@ export default (url: string): BrowserWindow => {
       nodeIntegration: false,
       sandbox: false,
       disableBlinkFeatures: 'Auxclick', // Security
-      preload: path.join(app.getAppPath(), 'lib/preload/index.js'),
     },
     icon: nativeImage.createFromPath(path.join(app.getAppPath(), 'resources/icons/normal/256.png')),
     show: false,
@@ -29,7 +29,8 @@ export default (url: string): BrowserWindow => {
     window.webContents.session.setSpellCheckerEnabled( !store.get('app.disableSpellChecker') );
   });
 
-  window.loadURL(url, {userAgent: 'Chrome'});
+  const platform = os.platform();
+  window.loadURL(url);
 
   return window;
 };
